@@ -1,21 +1,47 @@
 import { useLanguage } from "@/contexts/LanguageContext";
-import { Train } from "lucide-react";
+import mainLogo from "@/assets/indian-railway-logo.jpg";
+import logo2 from "@/assets/IRIS_logo_TM.bmp";
+import logo3 from "@/assets/national-emblem.jpg";
 
 export default function Header() {
   const { t } = useLanguage();
 
   return (
     <header className="bg-card border-b py-3">
-      <div className="container-page flex items-center gap-4">
-        <div className="flex items-center justify-center w-14 h-14 rounded-full bg-primary text-primary-foreground shrink-0">
-          <Train className="w-7 h-7" />
+      <div className="container-page flex items-center justify-between">
+
+        {/* Left Section (Main Logo + Title) */}
+        <div className="flex items-center gap-4">
+          <img
+            src={mainLogo}
+            alt="MCF Logo"
+            className="h-14 w-auto object-contain"
+          />
+
+          <div>
+            <h1 className="text-xl sm:text-2xl font-bold text-primary leading-tight">
+              {t.siteName}
+            </h1>
+            <p className="text-sm text-muted-foreground">
+              {t.siteSubtitle}
+            </p>
+          </div>
         </div>
-        <div>
-          <h1 className="text-xl sm:text-2xl font-bold text-primary leading-tight">
-            {t.siteName}
-          </h1>
-          <p className="text-sm text-muted-foreground">{t.siteSubtitle}</p>
+
+        {/* Right Section (Additional Logos) */}
+        <div className="flex items-center gap-6">
+          <img
+            src={logo2}
+            alt="Secondary Logo"
+            className="h-12 w-auto object-contain"
+          />
+          <img
+            src={logo3}
+            alt="Third Logo"
+            className="h-12 w-auto object-contain"
+          />
         </div>
+
       </div>
     </header>
   );
