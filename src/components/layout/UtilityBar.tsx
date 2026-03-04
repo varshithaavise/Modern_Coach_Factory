@@ -18,7 +18,7 @@ export default function UtilityBar() {
             <input
               type="search"
               placeholder={t.search.placeholder}
-              className="h-7 px-3 rounded text-xs bg-primary-foreground/10 border border-primary-foreground/20 text-primary-foreground placeholder:text-primary-foreground/50 focus:outline-none focus:ring-1 focus:ring-primary-foreground/40 w-48"
+              className="h-7 px-3 rounded text-xs bg-primary-foreground/10 border border-primary-foreground/20 text-primary-foreground placeholder:text-primary-foreground/50 focus:outline-none focus:ring-1 focus:ring-primary-foreground/40 w-28 sm:w-48"
               autoFocus
               aria-label={t.search.placeholder}
             />

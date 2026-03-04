@@ -81,15 +81,21 @@ export default function Home() {
 
   return (
     <>
-      <section className="relative min-h-[420px] flex items-center" aria-label="Hero">
-        <img src={heroBg} alt="" className="absolute inset-0 w-full h-full object-cover" aria-hidden="true" />
+      <section className="relative min-h-[320px] sm:min-h-[420px] md:min-h-[460px] flex items-center bg-railway-dark" aria-label="Hero">
+        <img
+          src={heroBg}
+          alt=""
+          className="absolute inset-0 w-full h-full object-contain sm:object-cover object-center"
+          aria-hidden="true"
+        />
+        <div className="absolute inset-0 bg-railway-dark/45 sm:bg-railway-dark/30" aria-hidden="true" />
         <div className="hero-overlay" />
-        <div className="relative container-page py-16 sm:py-24">
+        <div className="relative container-page py-12 sm:py-20 md:py-24">
           <div className="max-w-2xl animate-fade-in">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-primary-foreground leading-tight mb-4">
+            <h2 className="text-2xl sm:text-4xl lg:text-5xl font-bold text-primary-foreground leading-tight mb-4">
               {t.hero.title}
             </h2>
-            <p className="text-lg text-primary-foreground/80 mb-8 leading-relaxed">
+            <p className="text-base sm:text-lg text-primary-foreground/90 sm:text-primary-foreground/80 mb-6 sm:mb-8 leading-relaxed">
               {t.hero.subtitle}
             </p>
             <div className="flex flex-wrap gap-3">
