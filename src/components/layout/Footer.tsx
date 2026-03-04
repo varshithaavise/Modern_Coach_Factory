@@ -51,8 +51,8 @@ export default function Footer() {
 
       <div className="border-t border-primary-foreground/10">
         <div className="container-page py-4 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-primary-foreground/50">
-          <p>{t.footer.copyright}</p>
-          <div className="flex gap-4">
+          <p className="text-center sm:text-left">{t.footer.copyright}</p>
+          <div className="flex flex-wrap items-center justify-center sm:justify-end gap-4">
             <span>{t.footer.termsOfUse}</span>
             <span>{t.footer.accessibility}</span>
             <span>{t.footer.siteMap}</span>
